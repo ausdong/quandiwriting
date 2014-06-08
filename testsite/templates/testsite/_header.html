@@ -1,9 +1,8 @@
-	<div style="text-align:center;">
-		<div id="logotext">Quandi</div>
 	<style>
 		#navbar a{
 			text-decoration:none;
 			color: black;
+			font-weight: bold;
 			font-size: 2em;
 			margin: 5%;
 		}
@@ -13,6 +12,9 @@
 	</style>
 	
 	<div id="navbar">
+		<a href="http://www.quandiwriting.com/" target="_blank">
+			<img src="{{STATIC_URL}}logo.png" border="0" style="border:none;max-width:100%;" alt="Quandi Writing" />
+		</a>
 		<a href={% url "home1" %}>Home</a>
 		<a href={% url "about" %}>About Us</a>
 		<a href={% url "serv" %}>Services</a>

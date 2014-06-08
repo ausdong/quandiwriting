@@ -1,15 +1,15 @@
  body{
-        background-color: #fbfbfb;
+        background-color: #EEEAEA;
         color: #2e2e2e;
-        margin: 50px;
+        margin: 25px;
         padding: 0;
         font-size: 17px;
         line-height: 28px;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     div.content{
-        border: 1px solid #fbfbfb;
-        background-color: #fbfbfb;
+        border: 1px solid #EEEAEA;
+        background-color: #EEEAEA;
         max-width: 100%;
         width: 96%;
         padding: 2%;
@@ -18,31 +18,28 @@
 	 
 	 
 #navbar {
-		margin-top: 100px;
       width: 100%;
-      background-color:#e0e0e0;
       color:black;
       margin-bottom:0px;
 		padding: 5px;
 		font-size: 12px;
-		text-align:center;
+		text-align:left;
 }
 
-#navbartxt {
-
-		margin-left:14%;
-}
-
-#logo {
+#footbar {
+		-webkit-column-count: 4; /* Chrome, Safari, Opera */
+      -webkit-column-gap: 0px;
+		-moz-column-count: 4; /* Firefox */
+		-moz-column-gap: 0px;
+		column-count: 4;
+		column-gap: 0px;
 		width: 100%;
-		position:relative;
-		left:20px;
-		background-color:#fbfbfb;
+		border-top-color: #605F5F;
+		border-top-width: 3px;
+		text-align: left;
 }
-#logotext {
-		font-size:xx-large;
-		font-weight:bold;
-        color: black;
-        margin-left: 15px;
-        margin-top: 1px;
+
+#connect {
+		font-size: 20px;
+		font-weight: bold;
 }
