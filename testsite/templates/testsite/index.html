@@ -1,7 +1,47 @@
 {% extends 'base.html' %}
 {% block title %} Quandi {% endblock %}
 {% block content %}
-<div id="homebody">
+	<style>
+		h1 {
+			font-size: 4em;
+			color: #0084FF;
+		}
+		h1.ontop {
+			text-align: right;
+			position: absolute;
+			width: 95%;
+			top: 2em;
+			z-index: 5;
+		}
 
-</div>
+		h2 {
+			font-size: 1.3em;
+			color: black;
+		}
+		h2.ontop {
+			text-align: right;
+			position: absolute;
+			width: 95%;
+			top: 12.5em;
+			z-index: 5;
+		}
+		h2.ontopbutton {
+			margin-left: 65%;
+			text-align: right;
+			position: absolute;
+			width: 20%;
+			top: 14.5em;
+			z-index: 5;
+		}
+	</style>
+	<h1 class="ontop">
+		Personalized <br><br>
+		writing services
+	</h1>
+	<h2 class="ontop">
+		to help you get to the college or job you want<br><br>
+		<a href="http://www.quandiwriting.com/login/" class="buttonhover"><img src="{{STATIC_URL}}upload.png" border="0" alt="Upload"/></a>
+	</h2>
+	<div id="homebody"></div>
+
 {% endblock %}
