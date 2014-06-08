@@ -54,6 +54,18 @@ div.content{
 		text-align: left;
 }
 
+#homemenu {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -webkit-column-gap: 0px;
+		-moz-column-count: 3; /* Firefox */
+		-moz-column-gap: 0px;
+		column-count: 3;
+		column-gap: 0px;
+		width: 100%;
+		text-align: center;
+		margin-top: 2%;
+}
+
 #connect {
 		font-size: 20px;
 		font-weight: bold;

@@ -33,6 +33,11 @@
 			top: 14.5em;
 			z-index: 5;
 		}
+		
+		#homemenu a {
+			.floatcenter {float: center; margin: 0; width: 10px;}
+			.clear {clear:both}
+		}
 	</style>
 	<h1 class="ontop">
 		Personalized <br><br>
@@ -43,5 +48,15 @@
 		<a href="http://www.quandiwriting.com/login/" class="buttonhover"><img src="{{STATIC_URL}}upload.png" border="0" alt="Upload"/></a>
 	</h2>
 	<div id="homebody"></div>
-
+	<div id="homemenu">
+		<div class="floatcenter">
+			<a href="http://www.quandiwriting.com/About/" class="buttonhover"><img src="{{STATIC_URL}}menu1.png" border="0" alt="Upload"/></a>
+		</div>
+		<div class="floatcenter">
+			<a href="http://www.quandiwriting.com/About/" class="buttonhover"><img src="{{STATIC_URL}}menu2.png" border="0" alt="Upload"/></a>
+		</div>
+		<div class="floatcenter">
+			<a href="http://www.quandiwriting.com/About/" class="buttonhover"><img src="{{STATIC_URL}}menu3.png" border="0" alt="Upload"/></a>
+		</div>
+	</div>
 {% endblock %}
