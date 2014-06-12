@@ -5,7 +5,7 @@
 			font-size: 0.74em;
 			font-weight: bold;
 			margin: 0;
-			.floatleft {float: left; margin: 0; width: 10px;}
+			.floatleft {float: left; margin: 0; width: 0px;}
 			.clear {clear:both}
 		}
 		#footbar a:hover{
@@ -35,7 +35,6 @@
 			<a href={% url "about" %}>Terms of Services</a><br><br>
 			<a href={% url "about" %}>&copy 2014 Quandi</a>
 		</div>
-		<div class="floatleft"></div>
 		
 		<div class="floatleft">
 			<div id="connect">
@@ -44,6 +43,12 @@
 			<a href="http://www.facebook.com/quandiwriting/" target="_blank"><img src="{{STATIC_URL}}fb_logo.png" style="max-width:40px;margin-right:5%;" alt="Facebook"/></a>
 			<a href="http://www.twitter.com/quandiwriting/" target="_blank"><img src="{{STATIC_URL}}twitter_logo.png" style="max-width:40px;margin-right:5%;" alt="Twitter"/></a>
 			<a href="http://www.linkedin.com/in/quandiwriting/" target="_blank"><img src="{{STATIC_URL}}linked_logo.png" style="max-width:40px;" alt="LinkedIn"/></a>
+			
 		</div>
+		
+		<div class="floatleft">
+		<!-- (c) 2005, 2014. Authorize.Net is a registered trademark of CyberSource Corporation --> <div class="AuthorizeNetSeal"> <script type="text/javascript" language="javascript">var ANS_customer_id="dfeac15d-0acf-4ed1-9920-f5c3fac5c6f4";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js" ></script> <a href="http://www.authorize.net/" id="AuthorizeNetText" target="_blank">Process Credit Cards</a> </div>	
+		</div>
+
 
 </div>

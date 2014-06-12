@@ -42,16 +42,20 @@ div.content{
 }
 
 #footbar {
-		-webkit-column-count: 4; /* Chrome, Safari, Opera */
+		-webkit-column-count: 5; /* Chrome, Safari, Opera */
       -webkit-column-gap: 0px;
-		-moz-column-count: 4; /* Firefox */
+		-moz-column-count: 5; /* Firefox */
 		-moz-column-gap: 0px;
-		column-count: 4;
+		column-count: 5;
 		column-gap: 0px;
 		width: 100%;
 		border-top-color: #605F5F;
 		border-top-width: 3px;
 		text-align: left;
+}
+
+#AuthorizeNetSeal {
+
 }
 
 #homemenu {
