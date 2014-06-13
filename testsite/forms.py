@@ -4,9 +4,11 @@ from django.contrib.auth.models import User
 
 #validation for user creation
 class UserForm(forms.Form):
-	username = forms.CharField(max_length=20)
+	first_name = forms.CharField(max_length=50)
+	last_name = forms.CharField(max_length=50)
 	email = forms.EmailField()
-	password = forms.CharField(widget=PasswordInput, max_length=40)
+	username = forms.CharField(max_length=50)
+	password = forms.CharField(widget=PasswordInput, max_length=50)
 	
 	def clean_username(self):
 		try:

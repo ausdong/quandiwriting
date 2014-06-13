@@ -84,3 +84,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_ROOT = '/home1/quandiwr/public_html/django/static/'
 STATIC_URL = '/django/static/'
+
+
+# authentication settings
+LOGIN_REDIRECT_URL = '/profile/'
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
+PASSWORD_RESET_TIMEOUT_DAYS = 1
