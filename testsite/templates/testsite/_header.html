@@ -4,7 +4,7 @@
 			color: black;
 			font-weight: bold;
 			font-size: 2em;
-			margin: 3%;
+			margin: 2%;
 		}
 		#navbar a:hover{
 			color: #585858;
@@ -19,7 +19,7 @@
 		<a href={% url "about" %}>About Us</a>
 		<a href={% url "serv" %}>Services</a>
 		{% if user.is_authenticated %}
-			<a href={% url "profile" %}>Profile</a>
+			<a href={% url "profile" %}>Profile ({{user.username}})</a>
 			<a href={% url 'django.contrib.auth.views.logout' %}>Logout</a>
 		{% else %}
 			<a href={% url 'django.contrib.auth.views.login' %}>Login</a>		
