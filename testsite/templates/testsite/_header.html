@@ -4,7 +4,7 @@
 			color: black;
 			font-weight: bold;
 			font-size: 2em;
-			margin: 5%;
+			margin: 3%;
 		}
 		#navbar a:hover{
 			color: #585858;
@@ -12,14 +12,15 @@
 	</style>
 	
 	<div id="navbar">
-		<a href="http://www.quandiwriting.com/" target="_blank">
+		<a href="http://www.quandiwriting.com/">
 			<img src="{{STATIC_URL}}logo.png" border="0" style="border:none;max-width:100%;" alt="Quandi Writing" />
 		</a>
 		<a href={% url "home1" %}>Home</a>
 		<a href={% url "about" %}>About Us</a>
 		<a href={% url "serv" %}>Services</a>
 		{% if user.is_authenticated %}
-			<a href={% url 'django.contrib.auth.views.logout' %}>Logout ({{user.username}})</a>
+			<a href={% url "profile" %}>Profile</a>
+			<a href={% url 'django.contrib.auth.views.logout' %}>Logout</a>
 		{% else %}
 			<a href={% url 'django.contrib.auth.views.login' %}>Login</a>		
 		{% endif %}	
