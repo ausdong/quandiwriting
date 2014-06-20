@@ -29,6 +29,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ADMINS = (('webmaster', 'webmaster@quandiwriting.com'))
+
 
 # Application definition
 
@@ -91,3 +93,16 @@ LOGIN_REDIRECT_URL = '/profile/'
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 PASSWORD_RESET_TIMEOUT_DAYS = 1
+
+# upload settings
+MEDIA_ROOT = '/home1/quandiwr/uploads/'
+MEDIA_URL = '/media/'
+FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
+
+# email settings
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = 'mail.quandiwriting.com'
+EMAIL_HOST_USER = 'webmaster@quandiwriting.com'
+EMAIL_HOST_PASSWORD = '200180243quandiemail'
+EMAIL_SUBJECT_PREFIX = '[Quandi] '
+EMAIL_PORT = 465
