@@ -13,4 +13,4 @@ class Submission(models.Model):
 	express = models.BooleanField()
 	created = models.DateTimeField(auto_now=False, auto_now_add=True)
 	modified = models.DateTimeField(auto_now=True, auto_now_add=False)
-	attached_file = ContentTypeRestrictedFileField(upload_to='uploads/', content_types=['text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.oasis.opendocument.text'],max_upload_size=5242880,blank=True, null=True)
+	attached_file = ContentTypeRestrictedFileField(upload_to='uploads/', content_types=['text/plain', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.oasis.opendocument.text'],max_upload_size=5242880)

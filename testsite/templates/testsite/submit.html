@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block title %} Quandi {% endblock %}
 {% block content %}
+<h3>Submission Form</h3>
 
-test payment
-<form name="PrePage" method = "post" action = "https://scotest.authorize.net/payment/CatalogPayment.aspx"> <input type = "hidden" name = "LinkId" value ="100190d8-a81b-4475-9909-e81f2c58514d" /> <input type = "image" src ="//testcontent.authorize.net/images/buy-now-gold.gif" /> </form>
-
+<form method="POST"	action="/upload/" enctype="multipart/form-data"> 
+   {% csrf_token %}
+	<p>
+   {{ form.word_count.label }}: {{ form.word_count }} <br>
+	{{ form.type_of_essay.label }}: {{ form.type_of_essay }} <br><br>
+	{{ form.comments_or_special_requests.label }}:<br>{{ form.comments_or_special_requests }} <br><br>
+	{{ form.prompt.label }}:<br>{{ form.prompt }} <br><br>
+	Select your essay file: {{ form.upload_file }} <br>
+	Expedited delivery? (extra $29) {{ form.delivery }}
+	</p>
+   <input type="submit" value="Submit" name='submit'>
+</form>
 {% endblock %}
