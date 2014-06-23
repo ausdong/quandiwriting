@@ -5,7 +5,8 @@
 		<h1> This is your profile </h1>
 		<h2> Username: {{user.username}} </h2>
 		<h3> Name: {{user.first_name}} {{user.last_name}} </h3>
-		<p> profile page under construction</p>	
+		<p><a href="{% url 'submit' %}">Upload your document here</a></p>	
+		<br>
 		<p><a href={% url 'django.contrib.auth.views.password_change' %}>Password Change</a></p>
 
 	{% else %}

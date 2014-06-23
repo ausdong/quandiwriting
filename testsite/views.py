@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.utils import timezone
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from .forms import UserForm
@@ -17,6 +18,7 @@ def about(request):
 	
 #registration page
 def register(request):
+
 	if request.method == 'POST':
 		form = UserForm(request.POST)
 		if form.is_valid():
@@ -30,7 +32,7 @@ def register(request):
 			newuser.save()
 			user = authenticate(username=name, password=pw)
 			login(request, user)
-			return HttpResponseRedirect('/')
+			return HttpResponseRedirect(request.GET['next'])
 	else:
 		form = UserForm()
 	return render(request, 'testsite/register.html', {'form':form})
@@ -38,6 +40,11 @@ def register(request):
 #profile page
 def profile(request):
 		return render(request, 'testsite/profile.html')
+	
+@login_required()	
+def submission(request):
+	return render(request, 'testsite/submit.html')
+
 		
 def pwchangedone(request):
 	return render(request, 'testsite/password_change_done.html')
